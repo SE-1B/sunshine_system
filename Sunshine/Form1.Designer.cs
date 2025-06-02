@@ -182,7 +182,7 @@
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 623);
+            this.ClientSize = new System.Drawing.Size(1169, 609);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.forgetPasswordLL);

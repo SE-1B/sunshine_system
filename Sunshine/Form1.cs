@@ -47,10 +47,6 @@ namespace Sunshine
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: 這行程式碼會將資料載入 'sunshineDataSet.Staff' 資料表。您可以視需要進行移動或移除。
-            this.staffTableAdapter.Fill(this.sunshineDataSet.Staff);
-            // TODO: 這行程式碼會將資料載入 'sunshineDataSet.Component' 資料表。您可以視需要進行移動或移除。
-            this.componentTableAdapter.Fill(this.sunshineDataSet.Component);
             // placeholders for username and password textboxes
             SendMessage(usernameTB.Handle, EM_SETCUEBANNER, 0, "Username");
             SendMessage(passwordTB.Handle, EM_SETCUEBANNER, 0, "Password");
@@ -77,15 +73,13 @@ namespace Sunshine
                         connStr.Open();
                     }
                     DataTable dt = new DataTable();
-                    sqlStr = "SELECT * FROM Staff WHERE username = '" + usernameTB.Text + "'";
+                    sqlStr = "SELECT * FROM Staff WHERE staff_ID like '__" + usernameTB.Text + "'";
                     
                     OleDbDataAdapter dataAdapter =
                             new OleDbDataAdapter(sqlStr, connStr);
                     dataAdapter.Fill(dt);
                     dataAdapter.Dispose();
-                    for (int i = 0; i < dt.Rows.Count && !loginSuccess; i++)
-                        if (usernameTB.Text.Equals(dt.Rows[i]["username"])
-                        && passwordTB.Text.Equals(dt.Rows[i]["staff_pw"]))
+                    if (passwordTB.Text.Equals(dt.Rows[0]["staff_pw"]))
                             loginSuccess = true;
 
                     if (loginSuccess)
@@ -107,9 +101,14 @@ namespace Sunshine
                         passwordTB.Clear();
                     }
                 }
+                catch (OleDbException ex)
+                {
+                    MessageBox.Show("Database connection error: " + ex.Message);
+                    return;
+                }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.StackTrace + "\nSQL: " + sqlStr);
+                    MessageBox.Show(ex.Message + "\nSQL: " + sqlStr);
                 }
             }
 

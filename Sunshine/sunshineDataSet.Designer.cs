@@ -6356,13 +6356,13 @@ namespace Sunshine {
             
             private global::System.Data.DataColumn columnjob_title;
             
-            private global::System.Data.DataColumn columnusername;
-            
             private global::System.Data.DataColumn columnstaff_email;
             
             private global::System.Data.DataColumn columnstaff_phone;
             
             private global::System.Data.DataColumn columnstaff_pw;
+            
+            private global::System.Data.DataColumn columnfavourite_food;
             
             private global::System.Data.DataColumn columndept_ID;
             
@@ -6441,14 +6441,6 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn usernameColumn {
-                get {
-                    return this.columnusername;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn staff_emailColumn {
                 get {
                     return this.columnstaff_email;
@@ -6468,6 +6460,14 @@ namespace Sunshine {
             public global::System.Data.DataColumn staff_pwColumn {
                 get {
                     return this.columnstaff_pw;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn favourite_foodColumn {
+                get {
+                    return this.columnfavourite_food;
                 }
             }
             
@@ -6548,17 +6548,17 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StaffRow AddStaffRow(string staff_ID, string name, string gender, string job_title, string username, string staff_email, string staff_phone, string staff_pw, DepartmentRow parentDepartmentRowByDepartmentStaff, int experience, decimal salary, int work_time, string comment) {
+            public StaffRow AddStaffRow(string staff_ID, string name, string gender, string job_title, string staff_email, string staff_phone, string staff_pw, string favourite_food, DepartmentRow parentDepartmentRowByDepartmentStaff, int experience, decimal salary, int work_time, string comment) {
                 StaffRow rowStaffRow = ((StaffRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         staff_ID,
                         name,
                         gender,
                         job_title,
-                        username,
                         staff_email,
                         staff_phone,
                         staff_pw,
+                        favourite_food,
                         null,
                         experience,
                         salary,
@@ -6600,10 +6600,10 @@ namespace Sunshine {
                 this.columnname = base.Columns["name"];
                 this.columngender = base.Columns["gender"];
                 this.columnjob_title = base.Columns["job_title"];
-                this.columnusername = base.Columns["username"];
                 this.columnstaff_email = base.Columns["staff_email"];
                 this.columnstaff_phone = base.Columns["staff_phone"];
                 this.columnstaff_pw = base.Columns["staff_pw"];
+                this.columnfavourite_food = base.Columns["favourite_food"];
                 this.columndept_ID = base.Columns["dept_ID"];
                 this.columnexperience = base.Columns["experience"];
                 this.columnsalary = base.Columns["salary"];
@@ -6622,14 +6622,14 @@ namespace Sunshine {
                 base.Columns.Add(this.columngender);
                 this.columnjob_title = new global::System.Data.DataColumn("job_title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnjob_title);
-                this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusername);
                 this.columnstaff_email = new global::System.Data.DataColumn("staff_email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstaff_email);
                 this.columnstaff_phone = new global::System.Data.DataColumn("staff_phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstaff_phone);
                 this.columnstaff_pw = new global::System.Data.DataColumn("staff_pw", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstaff_pw);
+                this.columnfavourite_food = new global::System.Data.DataColumn("favourite_food", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfavourite_food);
                 this.columndept_ID = new global::System.Data.DataColumn("dept_ID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndept_ID);
                 this.columnexperience = new global::System.Data.DataColumn("experience", typeof(int), null, global::System.Data.MappingType.Element);
@@ -6648,10 +6648,10 @@ namespace Sunshine {
                 this.columnname.MaxLength = 255;
                 this.columngender.MaxLength = 1;
                 this.columnjob_title.MaxLength = 40;
-                this.columnusername.MaxLength = 255;
                 this.columnstaff_email.MaxLength = 100;
                 this.columnstaff_phone.MaxLength = 11;
                 this.columnstaff_pw.MaxLength = 100;
+                this.columnfavourite_food.MaxLength = 255;
                 this.columndept_ID.MaxLength = 2;
                 this.columncomment.MaxLength = 255;
             }
@@ -10934,22 +10934,6 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string username {
-                get {
-                    try {
-                        return ((string)(this[this.tableStaff.usernameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'Staff\' 中資料行 \'username\' 的值是 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tableStaff.usernameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string staff_email {
                 get {
                     try {
@@ -10993,6 +10977,22 @@ namespace Sunshine {
                 }
                 set {
                     this[this.tableStaff.staff_pwColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string favourite_food {
+                get {
+                    try {
+                        return ((string)(this[this.tableStaff.favourite_foodColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'Staff\' 中資料行 \'favourite_food\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableStaff.favourite_foodColumn] = value;
                 }
             }
             
@@ -11125,18 +11125,6 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsusernameNull() {
-                return this.IsNull(this.tableStaff.usernameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetusernameNull() {
-                this[this.tableStaff.usernameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isstaff_emailNull() {
                 return this.IsNull(this.tableStaff.staff_emailColumn);
             }
@@ -11169,6 +11157,18 @@ namespace Sunshine {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setstaff_pwNull() {
                 this[this.tableStaff.staff_pwColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isfavourite_foodNull() {
+                return this.IsNull(this.tableStaff.favourite_foodColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setfavourite_foodNull() {
+                this[this.tableStaff.favourite_foodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20337,10 +20337,10 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("gender", "gender");
             tableMapping.ColumnMappings.Add("job_title", "job_title");
-            tableMapping.ColumnMappings.Add("username", "username");
             tableMapping.ColumnMappings.Add("staff_email", "staff_email");
             tableMapping.ColumnMappings.Add("staff_phone", "staff_phone");
             tableMapping.ColumnMappings.Add("staff_pw", "staff_pw");
+            tableMapping.ColumnMappings.Add("favourite_food", "favourite_food");
             tableMapping.ColumnMappings.Add("dept_ID", "dept_ID");
             tableMapping.ColumnMappings.Add("experience", "experience");
             tableMapping.ColumnMappings.Add("salary", "salary");
@@ -20349,7 +20349,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Staff` WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `username` IS NULL) OR (`username` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Staff` WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `favourite_food` IS NULL) OR (`favourite_food` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Original, true, null));
@@ -20358,14 +20358,14 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_job_title", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_username", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_pw", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_pw", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_favourite_food", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "favourite_food", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_favourite_food", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "favourite_food", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dept_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dept_ID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dept_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dept_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_experience", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "experience", global::System.Data.DataRowVersion.Original, true, null));
@@ -20378,18 +20378,18 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_comment", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comment", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Staff` (`staff_ID`, `name`, `gender`, `job_title`, `username`, `staf" +
-                "f_email`, `staff_phone`, `staff_pw`, `dept_ID`, `experience`, `salary`, `work_ti" +
-                "me`, `comment`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Staff` (`staff_ID`, `name`, `gender`, `job_title`, `staff_email`, `s" +
+                "taff_phone`, `staff_pw`, `favourite_food`, `dept_ID`, `experience`, `salary`, `w" +
+                "ork_time`, `comment`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_pw", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("favourite_food", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "favourite_food", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dept_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dept_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("experience", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "experience", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("salary", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "salary", global::System.Data.DataRowVersion.Current, false, null));
@@ -20397,16 +20397,16 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("comment", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comment", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Staff` SET `staff_ID` = ?, `name` = ?, `gender` = ?, `job_title` = ?, `username` = ?, `staff_email` = ?, `staff_phone` = ?, `staff_pw` = ?, `dept_ID` = ?, `experience` = ?, `salary` = ?, `work_time` = ?, `comment` = ? WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `username` IS NULL) OR (`username` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Staff` SET `staff_ID` = ?, `name` = ?, `gender` = ?, `job_title` = ?, `staff_email` = ?, `staff_phone` = ?, `staff_pw` = ?, `favourite_food` = ?, `dept_ID` = ?, `experience` = ?, `salary` = ?, `work_time` = ?, `comment` = ? WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `favourite_food` IS NULL) OR (`favourite_food` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_pw", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("favourite_food", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "favourite_food", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dept_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dept_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("experience", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "experience", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("salary", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "salary", global::System.Data.DataRowVersion.Current, false, null));
@@ -20419,14 +20419,14 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_job_title", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_username", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_pw", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_pw", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_favourite_food", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "favourite_food", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_favourite_food", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "favourite_food", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dept_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dept_ID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dept_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dept_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_experience", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "experience", global::System.Data.DataRowVersion.Original, true, null));
@@ -20452,8 +20452,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT staff_ID, name, gender, job_title, username, staff_email, staff_phone, sta" +
-                "ff_pw, dept_ID, experience, salary, work_time, comment FROM Staff";
+            this._commandCollection[0].CommandText = "SELECT staff_ID, name, gender, job_title, staff_email, staff_phone, staff_pw, fav" +
+                "ourite_food, dept_ID, experience, salary, work_time, comment FROM Staff";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -20514,7 +20514,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_staff_ID, string Original_name, string Original_gender, string Original_job_title, string Original_username, string Original_staff_email, string Original_staff_phone, string Original_staff_pw, string Original_dept_ID, global::System.Nullable<int> Original_experience, global::System.Nullable<decimal> Original_salary, global::System.Nullable<int> Original_work_time, string Original_comment) {
+        public virtual int Delete(string Original_staff_ID, string Original_name, string Original_gender, string Original_job_title, string Original_staff_email, string Original_staff_phone, string Original_staff_pw, string Original_favourite_food, string Original_dept_ID, global::System.Nullable<int> Original_experience, global::System.Nullable<decimal> Original_salary, global::System.Nullable<int> Original_work_time, string Original_comment) {
             if ((Original_staff_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_staff_ID");
             }
@@ -20545,37 +20545,37 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_job_title));
             }
-            if ((Original_username == null)) {
+            if ((Original_staff_email == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_username));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_staff_email));
             }
-            if ((Original_staff_email == null)) {
+            if ((Original_staff_phone == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_staff_email));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_staff_phone));
             }
-            if ((Original_staff_phone == null)) {
+            if ((Original_staff_pw == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_staff_phone));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_staff_pw));
             }
-            if ((Original_staff_pw == null)) {
+            if ((Original_favourite_food == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_staff_pw));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_favourite_food));
             }
             if ((Original_dept_ID == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
@@ -20637,7 +20637,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string staff_ID, string name, string gender, string job_title, string username, string staff_email, string staff_phone, string staff_pw, string dept_ID, global::System.Nullable<int> experience, global::System.Nullable<decimal> salary, global::System.Nullable<int> work_time, string comment) {
+        public virtual int Insert(string staff_ID, string name, string gender, string job_title, string staff_email, string staff_phone, string staff_pw, string favourite_food, string dept_ID, global::System.Nullable<int> experience, global::System.Nullable<decimal> salary, global::System.Nullable<int> work_time, string comment) {
             if ((staff_ID == null)) {
                 throw new global::System.ArgumentNullException("staff_ID");
             }
@@ -20662,29 +20662,29 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(job_title));
             }
-            if ((username == null)) {
+            if ((staff_email == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(username));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(staff_email));
             }
-            if ((staff_email == null)) {
+            if ((staff_phone == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(staff_email));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(staff_phone));
             }
-            if ((staff_phone == null)) {
+            if ((staff_pw == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(staff_phone));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(staff_pw));
             }
-            if ((staff_pw == null)) {
+            if ((favourite_food == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(staff_pw));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(favourite_food));
             }
             if ((dept_ID == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -20741,10 +20741,10 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string name, 
                     string gender, 
                     string job_title, 
-                    string username, 
                     string staff_email, 
                     string staff_phone, 
                     string staff_pw, 
+                    string favourite_food, 
                     string dept_ID, 
                     global::System.Nullable<int> experience, 
                     global::System.Nullable<decimal> salary, 
@@ -20754,10 +20754,10 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string Original_name, 
                     string Original_gender, 
                     string Original_job_title, 
-                    string Original_username, 
                     string Original_staff_email, 
                     string Original_staff_phone, 
                     string Original_staff_pw, 
+                    string Original_favourite_food, 
                     string Original_dept_ID, 
                     global::System.Nullable<int> Original_experience, 
                     global::System.Nullable<decimal> Original_salary, 
@@ -20787,29 +20787,29 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(job_title));
             }
-            if ((username == null)) {
+            if ((staff_email == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(username));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(staff_email));
             }
-            if ((staff_email == null)) {
+            if ((staff_phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(staff_email));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(staff_phone));
             }
-            if ((staff_phone == null)) {
+            if ((staff_pw == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(staff_phone));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(staff_pw));
             }
-            if ((staff_pw == null)) {
+            if ((favourite_food == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(staff_pw));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(favourite_food));
             }
             if ((dept_ID == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -20871,37 +20871,37 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_job_title));
             }
-            if ((Original_username == null)) {
+            if ((Original_staff_email == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_username));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_staff_email));
             }
-            if ((Original_staff_email == null)) {
+            if ((Original_staff_phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_staff_email));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_staff_phone));
             }
-            if ((Original_staff_phone == null)) {
+            if ((Original_staff_pw == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_staff_phone));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_staff_pw));
             }
-            if ((Original_staff_pw == null)) {
+            if ((Original_favourite_food == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_staff_pw));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_favourite_food));
             }
             if ((Original_dept_ID == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
@@ -20967,10 +20967,10 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string name, 
                     string gender, 
                     string job_title, 
-                    string username, 
                     string staff_email, 
                     string staff_phone, 
                     string staff_pw, 
+                    string favourite_food, 
                     string dept_ID, 
                     global::System.Nullable<int> experience, 
                     global::System.Nullable<decimal> salary, 
@@ -20980,16 +20980,16 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string Original_name, 
                     string Original_gender, 
                     string Original_job_title, 
-                    string Original_username, 
                     string Original_staff_email, 
                     string Original_staff_phone, 
                     string Original_staff_pw, 
+                    string Original_favourite_food, 
                     string Original_dept_ID, 
                     global::System.Nullable<int> Original_experience, 
                     global::System.Nullable<decimal> Original_salary, 
                     global::System.Nullable<int> Original_work_time, 
                     string Original_comment) {
-            return this.Update(Original_staff_ID, name, gender, job_title, username, staff_email, staff_phone, staff_pw, dept_ID, experience, salary, work_time, comment, Original_staff_ID, Original_name, Original_gender, Original_job_title, Original_username, Original_staff_email, Original_staff_phone, Original_staff_pw, Original_dept_ID, Original_experience, Original_salary, Original_work_time, Original_comment);
+            return this.Update(Original_staff_ID, name, gender, job_title, staff_email, staff_phone, staff_pw, favourite_food, dept_ID, experience, salary, work_time, comment, Original_staff_ID, Original_name, Original_gender, Original_job_title, Original_staff_email, Original_staff_phone, Original_staff_pw, Original_favourite_food, Original_dept_ID, Original_experience, Original_salary, Original_work_time, Original_comment);
         }
     }
     

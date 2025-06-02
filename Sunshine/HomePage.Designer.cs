@@ -31,30 +31,31 @@
             this.components = new System.ComponentModel.Container();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.sunshineDataSet1 = new Sunshine.sunshineDataSet();
-            this.sunshineDataSet2 = new Sunshine.sunshineDataSet();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sunshineDataSet = new Sunshine.sunshineDataSet();
             this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staffTableAdapter = new Sunshine.sunshineDataSetTableAdapters.StaffTableAdapter();
-            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobtitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffpwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deptIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.experienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.worktimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sunshineDataSet3 = new Sunshine.sunshineDataSet();
+            this.quotationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quotationTableAdapter = new Sunshine.sunshineDataSetTableAdapters.QuotationTableAdapter();
+            this.staffBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.staffTableAdapter1 = new Sunshine.sunshineDataSetTableAdapters.StaffTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.favouritefoodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -77,159 +78,162 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.logout);
             // 
-            // sunshineDataSet1
+            // staffBindingSource
             // 
-            this.sunshineDataSet1.DataSetName = "sunshineDataSet";
-            this.sunshineDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sunshineDataSet2
-            // 
-            this.sunshineDataSet2.DataSetName = "sunshineDataSet";
-            this.sunshineDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.staffBindingSource.DataMember = "Staff";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.staffIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.jobtitleDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.staffemailDataGridViewTextBoxColumn,
-            this.staffphoneDataGridViewTextBoxColumn,
-            this.staffpwDataGridViewTextBoxColumn,
-            this.deptIDDataGridViewTextBoxColumn,
-            this.experienceDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn,
-            this.worktimeDataGridViewTextBoxColumn,
-            this.commentDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.staffBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(132, 261);
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.favouritefoodDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dataGridView1.DataSource = this.staffBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(87, 323);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(1582, 156);
+            this.dataGridView1.Size = new System.Drawing.Size(1220, 141);
             this.dataGridView1.TabIndex = 2;
             // 
-            // sunshineDataSet
+            // sunshineDataSet3
             // 
-            this.sunshineDataSet.DataSetName = "sunshineDataSet";
-            this.sunshineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sunshineDataSet3.DataSetName = "sunshineDataSet";
+            this.sunshineDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // staffBindingSource
+            // quotationBindingSource
             // 
-            this.staffBindingSource.DataMember = "Staff";
-            this.staffBindingSource.DataSource = this.sunshineDataSet;
+            this.quotationBindingSource.DataMember = "Quotation";
+            this.quotationBindingSource.DataSource = this.sunshineDataSet3;
             // 
-            // staffTableAdapter
+            // quotationTableAdapter
             // 
-            this.staffTableAdapter.ClearBeforeFill = true;
+            this.quotationTableAdapter.ClearBeforeFill = true;
             // 
-            // staffIDDataGridViewTextBoxColumn
+            // staffBindingSource1
             // 
-            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "staff_ID";
-            this.staffIDDataGridViewTextBoxColumn.HeaderText = "staff_ID";
-            this.staffIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
-            this.staffIDDataGridViewTextBoxColumn.Width = 150;
+            this.staffBindingSource1.DataMember = "Staff";
+            this.staffBindingSource1.DataSource = this.sunshineDataSet3;
             // 
-            // nameDataGridViewTextBoxColumn
+            // staffTableAdapter1
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 150;
+            this.staffTableAdapter1.ClearBeforeFill = true;
             // 
-            // genderDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "staff_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "staff_ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
-            // jobtitleDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.jobtitleDataGridViewTextBoxColumn.DataPropertyName = "job_title";
-            this.jobtitleDataGridViewTextBoxColumn.HeaderText = "job_title";
-            this.jobtitleDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.jobtitleDataGridViewTextBoxColumn.Name = "jobtitleDataGridViewTextBoxColumn";
-            this.jobtitleDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
-            // usernameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "gender";
+            this.dataGridViewTextBoxColumn3.HeaderText = "gender";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // staffemailDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.staffemailDataGridViewTextBoxColumn.DataPropertyName = "staff_email";
-            this.staffemailDataGridViewTextBoxColumn.HeaderText = "staff_email";
-            this.staffemailDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.staffemailDataGridViewTextBoxColumn.Name = "staffemailDataGridViewTextBoxColumn";
-            this.staffemailDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "job_title";
+            this.dataGridViewTextBoxColumn4.HeaderText = "job_title";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
             // 
-            // staffphoneDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.staffphoneDataGridViewTextBoxColumn.DataPropertyName = "staff_phone";
-            this.staffphoneDataGridViewTextBoxColumn.HeaderText = "staff_phone";
-            this.staffphoneDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.staffphoneDataGridViewTextBoxColumn.Name = "staffphoneDataGridViewTextBoxColumn";
-            this.staffphoneDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "staff_email";
+            this.dataGridViewTextBoxColumn5.HeaderText = "staff_email";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
-            // staffpwDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.staffpwDataGridViewTextBoxColumn.DataPropertyName = "staff_pw";
-            this.staffpwDataGridViewTextBoxColumn.HeaderText = "staff_pw";
-            this.staffpwDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.staffpwDataGridViewTextBoxColumn.Name = "staffpwDataGridViewTextBoxColumn";
-            this.staffpwDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "staff_phone";
+            this.dataGridViewTextBoxColumn6.HeaderText = "staff_phone";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 150;
             // 
-            // deptIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.deptIDDataGridViewTextBoxColumn.DataPropertyName = "dept_ID";
-            this.deptIDDataGridViewTextBoxColumn.HeaderText = "dept_ID";
-            this.deptIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.deptIDDataGridViewTextBoxColumn.Name = "deptIDDataGridViewTextBoxColumn";
-            this.deptIDDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "staff_pw";
+            this.dataGridViewTextBoxColumn7.HeaderText = "staff_pw";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 150;
             // 
-            // experienceDataGridViewTextBoxColumn
+            // favouritefoodDataGridViewTextBoxColumn
             // 
-            this.experienceDataGridViewTextBoxColumn.DataPropertyName = "experience";
-            this.experienceDataGridViewTextBoxColumn.HeaderText = "experience";
-            this.experienceDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.experienceDataGridViewTextBoxColumn.Name = "experienceDataGridViewTextBoxColumn";
-            this.experienceDataGridViewTextBoxColumn.Width = 150;
+            this.favouritefoodDataGridViewTextBoxColumn.DataPropertyName = "favourite_food";
+            this.favouritefoodDataGridViewTextBoxColumn.HeaderText = "favourite_food";
+            this.favouritefoodDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.favouritefoodDataGridViewTextBoxColumn.Name = "favouritefoodDataGridViewTextBoxColumn";
+            this.favouritefoodDataGridViewTextBoxColumn.Width = 150;
             // 
-            // salaryDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "salary";
-            this.salaryDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            this.salaryDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "dept_ID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "dept_ID";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 150;
             // 
-            // worktimeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.worktimeDataGridViewTextBoxColumn.DataPropertyName = "work_time";
-            this.worktimeDataGridViewTextBoxColumn.HeaderText = "work_time";
-            this.worktimeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.worktimeDataGridViewTextBoxColumn.Name = "worktimeDataGridViewTextBoxColumn";
-            this.worktimeDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "experience";
+            this.dataGridViewTextBoxColumn9.HeaderText = "experience";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 150;
             // 
-            // commentDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn10
             // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
-            this.commentDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "salary";
+            this.dataGridViewTextBoxColumn10.HeaderText = "salary";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "work_time";
+            this.dataGridViewTextBoxColumn11.HeaderText = "work_time";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "comment";
+            this.dataGridViewTextBoxColumn12.HeaderText = "comment";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 150;
             // 
             // HomePage
             // 
@@ -243,11 +247,11 @@
             this.Name = "HomePage";
             this.Text = "DummyHomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sunshineDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +263,6 @@
         private System.Windows.Forms.Button button1;
         private sunshineDataSet sunshineDataSet1;
         private sunshineDataSet sunshineDataSet2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private sunshineDataSet sunshineDataSet;
         private System.Windows.Forms.BindingSource staffBindingSource;
         private sunshineDataSetTableAdapters.StaffTableAdapter staffTableAdapter;
@@ -276,5 +279,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn worktimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private sunshineDataSet sunshineDataSet3;
+        private System.Windows.Forms.BindingSource quotationBindingSource;
+        private sunshineDataSetTableAdapters.QuotationTableAdapter quotationTableAdapter;
+        private System.Windows.Forms.BindingSource staffBindingSource1;
+        private sunshineDataSetTableAdapters.StaffTableAdapter staffTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn favouritefoodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
     }
 }
