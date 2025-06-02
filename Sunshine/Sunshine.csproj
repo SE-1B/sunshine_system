@@ -67,6 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DummyHomePage.Designer.cs">
+      <DependentUpon>DummyHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sunshineDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DummyHomePage.resx">
+      <DependentUpon>DummyHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
