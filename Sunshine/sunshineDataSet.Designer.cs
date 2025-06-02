@@ -110,6 +110,8 @@ namespace Sunshine {
         
         private global::System.Data.DataRelation relationComponentTransfer_form;
         
+        private global::System.Data.DataRelation relationInventoryTransfer_form;
+        
         private global::System.Data.DataRelation relationMaterialTransfer_form;
         
         private global::System.Data.DataRelation relationProductTransfer_form;
@@ -744,6 +746,7 @@ namespace Sunshine {
             this.relationStaffSupplier_order = this.Relations["StaffSupplier_order"];
             this.relationSupplierSupplier_order = this.Relations["SupplierSupplier_order"];
             this.relationComponentTransfer_form = this.Relations["ComponentTransfer_form"];
+            this.relationInventoryTransfer_form = this.Relations["InventoryTransfer_form"];
             this.relationMaterialTransfer_form = this.Relations["MaterialTransfer_form"];
             this.relationProductTransfer_form = this.Relations["ProductTransfer_form"];
         }
@@ -886,6 +889,10 @@ namespace Sunshine {
                         this.tableComponent.component_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTransfer_form.component_IDColumn}, false);
             this.Relations.Add(this.relationComponentTransfer_form);
+            this.relationInventoryTransfer_form = new global::System.Data.DataRelation("InventoryTransfer_form", new global::System.Data.DataColumn[] {
+                        this.tableInventory.inventory_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTransfer_form.inventory_IDColumn}, false);
+            this.Relations.Add(this.relationInventoryTransfer_form);
             this.relationMaterialTransfer_form = new global::System.Data.DataRelation("MaterialTransfer_form", new global::System.Data.DataColumn[] {
                         this.tableMaterial.material_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTransfer_form.material_IDColumn}, false);
@@ -6349,6 +6356,8 @@ namespace Sunshine {
             
             private global::System.Data.DataColumn columnjob_title;
             
+            private global::System.Data.DataColumn columnusername;
+            
             private global::System.Data.DataColumn columnstaff_email;
             
             private global::System.Data.DataColumn columnstaff_phone;
@@ -6427,6 +6436,14 @@ namespace Sunshine {
             public global::System.Data.DataColumn job_titleColumn {
                 get {
                     return this.columnjob_title;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usernameColumn {
+                get {
+                    return this.columnusername;
                 }
             }
             
@@ -6531,13 +6548,14 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StaffRow AddStaffRow(string staff_ID, string name, string gender, string job_title, string staff_email, string staff_phone, string staff_pw, DepartmentRow parentDepartmentRowByDepartmentStaff, int experience, decimal salary, int work_time, string comment) {
+            public StaffRow AddStaffRow(string staff_ID, string name, string gender, string job_title, string username, string staff_email, string staff_phone, string staff_pw, DepartmentRow parentDepartmentRowByDepartmentStaff, int experience, decimal salary, int work_time, string comment) {
                 StaffRow rowStaffRow = ((StaffRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         staff_ID,
                         name,
                         gender,
                         job_title,
+                        username,
                         staff_email,
                         staff_phone,
                         staff_pw,
@@ -6547,7 +6565,7 @@ namespace Sunshine {
                         work_time,
                         comment};
                 if ((parentDepartmentRowByDepartmentStaff != null)) {
-                    columnValuesArray[7] = parentDepartmentRowByDepartmentStaff[0];
+                    columnValuesArray[8] = parentDepartmentRowByDepartmentStaff[0];
                 }
                 rowStaffRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStaffRow);
@@ -6582,6 +6600,7 @@ namespace Sunshine {
                 this.columnname = base.Columns["name"];
                 this.columngender = base.Columns["gender"];
                 this.columnjob_title = base.Columns["job_title"];
+                this.columnusername = base.Columns["username"];
                 this.columnstaff_email = base.Columns["staff_email"];
                 this.columnstaff_phone = base.Columns["staff_phone"];
                 this.columnstaff_pw = base.Columns["staff_pw"];
@@ -6603,6 +6622,8 @@ namespace Sunshine {
                 base.Columns.Add(this.columngender);
                 this.columnjob_title = new global::System.Data.DataColumn("job_title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnjob_title);
+                this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusername);
                 this.columnstaff_email = new global::System.Data.DataColumn("staff_email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstaff_email);
                 this.columnstaff_phone = new global::System.Data.DataColumn("staff_phone", typeof(string), null, global::System.Data.MappingType.Element);
@@ -6627,6 +6648,7 @@ namespace Sunshine {
                 this.columnname.MaxLength = 255;
                 this.columngender.MaxLength = 1;
                 this.columnjob_title.MaxLength = 40;
+                this.columnusername.MaxLength = 255;
                 this.columnstaff_email.MaxLength = 100;
                 this.columnstaff_phone.MaxLength = 11;
                 this.columnstaff_pw.MaxLength = 100;
@@ -7432,6 +7454,8 @@ namespace Sunshine {
             
             private global::System.Data.DataColumn columnproduct_ID;
             
+            private global::System.Data.DataColumn columninventory_ID;
+            
             private global::System.Data.DataColumn columnqty;
             
             private global::System.Data.DataColumn columnreason;
@@ -7515,6 +7539,14 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn inventory_IDColumn {
+                get {
+                    return this.columninventory_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn qtyColumn {
                 get {
                     return this.columnqty;
@@ -7582,11 +7614,12 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Transfer_formRow AddTransfer_formRow(string trans_ID, System.DateTime trans_date, MaterialRow parentMaterialRowByMaterialTransfer_form, ComponentRow parentComponentRowByComponentTransfer_form, ProductRow parentProductRowByProductTransfer_form, int qty, string reason, string mgr_id, int status) {
+            public Transfer_formRow AddTransfer_formRow(string trans_ID, System.DateTime trans_date, MaterialRow parentMaterialRowByMaterialTransfer_form, ComponentRow parentComponentRowByComponentTransfer_form, ProductRow parentProductRowByProductTransfer_form, InventoryRow parentInventoryRowByInventoryTransfer_form, int qty, string reason, string mgr_id, int status) {
                 Transfer_formRow rowTransfer_formRow = ((Transfer_formRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         trans_ID,
                         trans_date,
+                        null,
                         null,
                         null,
                         null,
@@ -7602,6 +7635,9 @@ namespace Sunshine {
                 }
                 if ((parentProductRowByProductTransfer_form != null)) {
                     columnValuesArray[4] = parentProductRowByProductTransfer_form[0];
+                }
+                if ((parentInventoryRowByInventoryTransfer_form != null)) {
+                    columnValuesArray[5] = parentInventoryRowByInventoryTransfer_form[0];
                 }
                 rowTransfer_formRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTransfer_formRow);
@@ -7637,6 +7673,7 @@ namespace Sunshine {
                 this.columnmaterial_ID = base.Columns["material_ID"];
                 this.columncomponent_ID = base.Columns["component_ID"];
                 this.columnproduct_ID = base.Columns["product_ID"];
+                this.columninventory_ID = base.Columns["inventory_ID"];
                 this.columnqty = base.Columns["qty"];
                 this.columnreason = base.Columns["reason"];
                 this.columnmgr_id = base.Columns["mgr_id"];
@@ -7656,6 +7693,8 @@ namespace Sunshine {
                 base.Columns.Add(this.columncomponent_ID);
                 this.columnproduct_ID = new global::System.Data.DataColumn("product_ID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproduct_ID);
+                this.columninventory_ID = new global::System.Data.DataColumn("inventory_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninventory_ID);
                 this.columnqty = new global::System.Data.DataColumn("qty", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnqty);
                 this.columnreason = new global::System.Data.DataColumn("reason", typeof(string), null, global::System.Data.MappingType.Element);
@@ -7672,6 +7711,7 @@ namespace Sunshine {
                 this.columnmaterial_ID.MaxLength = 10;
                 this.columncomponent_ID.MaxLength = 10;
                 this.columnproduct_ID.MaxLength = 10;
+                this.columninventory_ID.MaxLength = 10;
                 this.columnreason.MaxLength = 200;
                 this.columnmgr_id.MaxLength = 10;
             }
@@ -9371,6 +9411,17 @@ namespace Sunshine {
                     return ((Production_lineRow[])(base.GetChildRows(this.Table.ChildRelations["InventoryProduction_line"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Transfer_formRow[] GetTransfer_formRows() {
+                if ((this.Table.ChildRelations["InventoryTransfer_form"] == null)) {
+                    return new Transfer_formRow[0];
+                }
+                else {
+                    return ((Transfer_formRow[])(base.GetChildRows(this.Table.ChildRelations["InventoryTransfer_form"])));
+                }
+            }
         }
         
         /// <summary>
@@ -10883,6 +10934,22 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string username {
+                get {
+                    try {
+                        return ((string)(this[this.tableStaff.usernameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'Staff\' 中資料行 \'username\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableStaff.usernameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string staff_email {
                 get {
                     try {
@@ -11054,6 +11121,18 @@ namespace Sunshine {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setjob_titleNull() {
                 this[this.tableStaff.job_titleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsusernameNull() {
+                return this.IsNull(this.tableStaff.usernameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetusernameNull() {
+                this[this.tableStaff.usernameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11625,6 +11704,22 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string inventory_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransfer_form.inventory_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'Transfer_form\' 中資料行 \'inventory_ID\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableTransfer_form.inventory_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int qty {
                 get {
                     try {
@@ -11700,6 +11795,17 @@ namespace Sunshine {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public InventoryRow InventoryRow {
+                get {
+                    return ((InventoryRow)(this.GetParentRow(this.Table.ParentRelations["InventoryTransfer_form"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["InventoryTransfer_form"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MaterialRow MaterialRow {
                 get {
                     return ((MaterialRow)(this.GetParentRow(this.Table.ParentRelations["MaterialTransfer_form"])));
@@ -11766,6 +11872,18 @@ namespace Sunshine {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setproduct_IDNull() {
                 this[this.tableTransfer_form.product_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinventory_IDNull() {
+                return this.IsNull(this.tableTransfer_form.inventory_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinventory_IDNull() {
+                this[this.tableTransfer_form.inventory_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20219,6 +20337,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("gender", "gender");
             tableMapping.ColumnMappings.Add("job_title", "job_title");
+            tableMapping.ColumnMappings.Add("username", "username");
             tableMapping.ColumnMappings.Add("staff_email", "staff_email");
             tableMapping.ColumnMappings.Add("staff_phone", "staff_phone");
             tableMapping.ColumnMappings.Add("staff_pw", "staff_pw");
@@ -20230,7 +20349,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Staff` WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Staff` WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `username` IS NULL) OR (`username` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Original, true, null));
@@ -20239,6 +20358,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_job_title", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_username", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Original, true, null));
@@ -20257,14 +20378,15 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_comment", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comment", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Staff` (`staff_ID`, `name`, `gender`, `job_title`, `staff_email`, `s" +
-                "taff_phone`, `staff_pw`, `dept_ID`, `experience`, `salary`, `work_time`, `commen" +
-                "t`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Staff` (`staff_ID`, `name`, `gender`, `job_title`, `username`, `staf" +
+                "f_email`, `staff_phone`, `staff_pw`, `dept_ID`, `experience`, `salary`, `work_ti" +
+                "me`, `comment`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_pw", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Current, false, null));
@@ -20275,12 +20397,13 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("comment", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comment", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Staff` SET `staff_ID` = ?, `name` = ?, `gender` = ?, `job_title` = ?, `staff_email` = ?, `staff_phone` = ?, `staff_pw` = ?, `dept_ID` = ?, `experience` = ?, `salary` = ?, `work_time` = ?, `comment` = ? WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Staff` SET `staff_ID` = ?, `name` = ?, `gender` = ?, `job_title` = ?, `username` = ?, `staff_email` = ?, `staff_phone` = ?, `staff_pw` = ?, `dept_ID` = ?, `experience` = ?, `salary` = ?, `work_time` = ?, `comment` = ? WHERE ((`staff_ID` = ?) AND ((? = 1 AND `name` IS NULL) OR (`name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `job_title` IS NULL) OR (`job_title` = ?)) AND ((? = 1 AND `username` IS NULL) OR (`username` = ?)) AND ((? = 1 AND `staff_email` IS NULL) OR (`staff_email` = ?)) AND ((? = 1 AND `staff_phone` IS NULL) OR (`staff_phone` = ?)) AND ((? = 1 AND `staff_pw` IS NULL) OR (`staff_pw` = ?)) AND ((? = 1 AND `dept_ID` IS NULL) OR (`dept_ID` = ?)) AND ((? = 1 AND `experience` IS NULL) OR (`experience` = ?)) AND ((? = 1 AND `salary` IS NULL) OR (`salary` = ?)) AND ((? = 1 AND `work_time` IS NULL) OR (`work_time` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staff_pw", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_pw", global::System.Data.DataRowVersion.Current, false, null));
@@ -20296,6 +20419,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gender", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_job_title", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_job_title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "job_title", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_username", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_username", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staff_email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staff_phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staff_phone", global::System.Data.DataRowVersion.Original, true, null));
@@ -20327,8 +20452,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT staff_ID, name, gender, job_title, staff_email, staff_phone, staff_pw, dep" +
-                "t_ID, experience, salary, work_time, comment FROM Staff";
+            this._commandCollection[0].CommandText = "SELECT staff_ID, name, gender, job_title, username, staff_email, staff_phone, sta" +
+                "ff_pw, dept_ID, experience, salary, work_time, comment FROM Staff";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -20389,7 +20514,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_staff_ID, string Original_name, string Original_gender, string Original_job_title, string Original_staff_email, string Original_staff_phone, string Original_staff_pw, string Original_dept_ID, global::System.Nullable<int> Original_experience, global::System.Nullable<decimal> Original_salary, global::System.Nullable<int> Original_work_time, string Original_comment) {
+        public virtual int Delete(string Original_staff_ID, string Original_name, string Original_gender, string Original_job_title, string Original_username, string Original_staff_email, string Original_staff_phone, string Original_staff_pw, string Original_dept_ID, global::System.Nullable<int> Original_experience, global::System.Nullable<decimal> Original_salary, global::System.Nullable<int> Original_work_time, string Original_comment) {
             if ((Original_staff_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_staff_ID");
             }
@@ -20420,69 +20545,77 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_job_title));
             }
-            if ((Original_staff_email == null)) {
+            if ((Original_username == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_staff_email));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_username));
             }
-            if ((Original_staff_phone == null)) {
+            if ((Original_staff_email == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_staff_phone));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_staff_email));
             }
-            if ((Original_staff_pw == null)) {
+            if ((Original_staff_phone == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_staff_pw));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_staff_phone));
             }
-            if ((Original_dept_ID == null)) {
+            if ((Original_staff_pw == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_dept_ID));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_staff_pw));
             }
-            if ((Original_experience.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_experience.Value));
-            }
-            else {
+            if ((Original_dept_ID == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_salary.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_dept_ID));
+            }
+            if ((Original_experience.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((decimal)(Original_salary.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_experience.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_work_time.HasValue == true)) {
+            if ((Original_salary.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_work_time.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((decimal)(Original_salary.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_comment == null)) {
+            if ((Original_work_time.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_work_time.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
+            if ((Original_comment == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_comment));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_comment));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -20504,7 +20637,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string staff_ID, string name, string gender, string job_title, string staff_email, string staff_phone, string staff_pw, string dept_ID, global::System.Nullable<int> experience, global::System.Nullable<decimal> salary, global::System.Nullable<int> work_time, string comment) {
+        public virtual int Insert(string staff_ID, string name, string gender, string job_title, string username, string staff_email, string staff_phone, string staff_pw, string dept_ID, global::System.Nullable<int> experience, global::System.Nullable<decimal> salary, global::System.Nullable<int> work_time, string comment) {
             if ((staff_ID == null)) {
                 throw new global::System.ArgumentNullException("staff_ID");
             }
@@ -20529,53 +20662,59 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(job_title));
             }
-            if ((staff_email == null)) {
+            if ((username == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(staff_email));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(username));
             }
-            if ((staff_phone == null)) {
+            if ((staff_email == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(staff_phone));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(staff_email));
             }
-            if ((staff_pw == null)) {
+            if ((staff_phone == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(staff_pw));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(staff_phone));
             }
-            if ((dept_ID == null)) {
+            if ((staff_pw == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(dept_ID));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(staff_pw));
             }
-            if ((experience.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(experience.Value));
-            }
-            else {
+            if ((dept_ID == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((salary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(salary.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(dept_ID));
+            }
+            if ((experience.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(experience.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((work_time.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(work_time.Value));
+            if ((salary.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(salary.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((comment == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((work_time.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(work_time.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(comment));
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((comment == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(comment));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -20602,6 +20741,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string name, 
                     string gender, 
                     string job_title, 
+                    string username, 
                     string staff_email, 
                     string staff_phone, 
                     string staff_pw, 
@@ -20614,6 +20754,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string Original_name, 
                     string Original_gender, 
                     string Original_job_title, 
+                    string Original_username, 
                     string Original_staff_email, 
                     string Original_staff_phone, 
                     string Original_staff_pw, 
@@ -20646,147 +20787,161 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(job_title));
             }
-            if ((staff_email == null)) {
+            if ((username == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(staff_email));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(username));
             }
-            if ((staff_phone == null)) {
+            if ((staff_email == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(staff_phone));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(staff_email));
             }
-            if ((staff_pw == null)) {
+            if ((staff_phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(staff_pw));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(staff_phone));
             }
-            if ((dept_ID == null)) {
+            if ((staff_pw == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(dept_ID));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(staff_pw));
             }
-            if ((experience.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(experience.Value));
-            }
-            else {
+            if ((dept_ID == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((salary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(salary.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(dept_ID));
+            }
+            if ((experience.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(experience.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((work_time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(work_time.Value));
+            if ((salary.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(salary.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((comment == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((work_time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(work_time.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(comment));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((comment == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(comment));
             }
             if ((Original_staff_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_staff_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_staff_ID));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_staff_ID));
             }
             if ((Original_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_name));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_name));
             }
             if ((Original_gender == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_gender));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_gender));
             }
             if ((Original_job_title == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_job_title));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_job_title));
+            }
+            if ((Original_username == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_username));
             }
             if ((Original_staff_email == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_staff_email));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_staff_email));
             }
             if ((Original_staff_phone == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_staff_phone));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_staff_phone));
             }
             if ((Original_staff_pw == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_staff_pw));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_staff_pw));
             }
             if ((Original_dept_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_dept_ID));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_dept_ID));
             }
             if ((Original_experience.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_experience.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_experience.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_salary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original_salary.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(Original_salary.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             if ((Original_work_time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_work_time.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_work_time.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             if ((Original_comment == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_comment));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_comment));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -20812,6 +20967,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string name, 
                     string gender, 
                     string job_title, 
+                    string username, 
                     string staff_email, 
                     string staff_phone, 
                     string staff_pw, 
@@ -20824,6 +20980,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string Original_name, 
                     string Original_gender, 
                     string Original_job_title, 
+                    string Original_username, 
                     string Original_staff_email, 
                     string Original_staff_phone, 
                     string Original_staff_pw, 
@@ -20832,7 +20989,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     global::System.Nullable<decimal> Original_salary, 
                     global::System.Nullable<int> Original_work_time, 
                     string Original_comment) {
-            return this.Update(Original_staff_ID, name, gender, job_title, staff_email, staff_phone, staff_pw, dept_ID, experience, salary, work_time, comment, Original_staff_ID, Original_name, Original_gender, Original_job_title, Original_staff_email, Original_staff_phone, Original_staff_pw, Original_dept_ID, Original_experience, Original_salary, Original_work_time, Original_comment);
+            return this.Update(Original_staff_ID, name, gender, job_title, username, staff_email, staff_phone, staff_pw, dept_ID, experience, salary, work_time, comment, Original_staff_ID, Original_name, Original_gender, Original_job_title, Original_username, Original_staff_email, Original_staff_phone, Original_staff_pw, Original_dept_ID, Original_experience, Original_salary, Original_work_time, Original_comment);
         }
     }
     
@@ -21894,6 +22051,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("material_ID", "material_ID");
             tableMapping.ColumnMappings.Add("component_ID", "component_ID");
             tableMapping.ColumnMappings.Add("product_ID", "product_ID");
+            tableMapping.ColumnMappings.Add("inventory_ID", "inventory_ID");
             tableMapping.ColumnMappings.Add("qty", "qty");
             tableMapping.ColumnMappings.Add("reason", "reason");
             tableMapping.ColumnMappings.Add("mgr_id", "mgr_id");
@@ -21901,7 +22059,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Transfer_form` WHERE ((`trans_ID` = ?) AND ((? = 1 AND `trans_date` IS NULL) OR (`trans_date` = ?)) AND ((? = 1 AND `material_ID` IS NULL) OR (`material_ID` = ?)) AND ((? = 1 AND `component_ID` IS NULL) OR (`component_ID` = ?)) AND ((? = 1 AND `product_ID` IS NULL) OR (`product_ID` = ?)) AND ((? = 1 AND `qty` IS NULL) OR (`qty` = ?)) AND ((? = 1 AND `reason` IS NULL) OR (`reason` = ?)) AND ((? = 1 AND `mgr_id` IS NULL) OR (`mgr_id` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Transfer_form` WHERE ((`trans_ID` = ?) AND ((? = 1 AND `trans_date` IS NULL) OR (`trans_date` = ?)) AND ((? = 1 AND `material_ID` IS NULL) OR (`material_ID` = ?)) AND ((? = 1 AND `component_ID` IS NULL) OR (`component_ID` = ?)) AND ((? = 1 AND `product_ID` IS NULL) OR (`product_ID` = ?)) AND ((? = 1 AND `inventory_ID` IS NULL) OR (`inventory_ID` = ?)) AND ((? = 1 AND `qty` IS NULL) OR (`qty` = ?)) AND ((? = 1 AND `reason` IS NULL) OR (`reason` = ?)) AND ((? = 1 AND `mgr_id` IS NULL) OR (`mgr_id` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_trans_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "trans_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_trans_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "trans_date", global::System.Data.DataRowVersion.Original, true, null));
@@ -21912,6 +22070,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_component_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "component_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_product_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "product_ID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_product_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "product_ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_inventory_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "inventory_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_inventory_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "inventory_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_qty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "qty", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_qty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "qty", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_reason", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "reason", global::System.Data.DataRowVersion.Original, true, null));
@@ -21923,27 +22083,29 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Transfer_form` (`trans_ID`, `trans_date`, `material_ID`, `component_" +
-                "ID`, `product_ID`, `qty`, `reason`, `mgr_id`, `status`) VALUES (?, ?, ?, ?, ?, ?" +
-                ", ?, ?, ?)";
+                "ID`, `product_ID`, `inventory_ID`, `qty`, `reason`, `mgr_id`, `status`) VALUES (" +
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("trans_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "trans_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("trans_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "trans_date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("material_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "material_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("component_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "component_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("product_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "product_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("inventory_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "inventory_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("qty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "qty", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("reason", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "reason", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("mgr_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mgr_id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Transfer_form` SET `trans_ID` = ?, `trans_date` = ?, `material_ID` = ?, `component_ID` = ?, `product_ID` = ?, `qty` = ?, `reason` = ?, `mgr_id` = ?, `status` = ? WHERE ((`trans_ID` = ?) AND ((? = 1 AND `trans_date` IS NULL) OR (`trans_date` = ?)) AND ((? = 1 AND `material_ID` IS NULL) OR (`material_ID` = ?)) AND ((? = 1 AND `component_ID` IS NULL) OR (`component_ID` = ?)) AND ((? = 1 AND `product_ID` IS NULL) OR (`product_ID` = ?)) AND ((? = 1 AND `qty` IS NULL) OR (`qty` = ?)) AND ((? = 1 AND `reason` IS NULL) OR (`reason` = ?)) AND ((? = 1 AND `mgr_id` IS NULL) OR (`mgr_id` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Transfer_form` SET `trans_ID` = ?, `trans_date` = ?, `material_ID` = ?, `component_ID` = ?, `product_ID` = ?, `inventory_ID` = ?, `qty` = ?, `reason` = ?, `mgr_id` = ?, `status` = ? WHERE ((`trans_ID` = ?) AND ((? = 1 AND `trans_date` IS NULL) OR (`trans_date` = ?)) AND ((? = 1 AND `material_ID` IS NULL) OR (`material_ID` = ?)) AND ((? = 1 AND `component_ID` IS NULL) OR (`component_ID` = ?)) AND ((? = 1 AND `product_ID` IS NULL) OR (`product_ID` = ?)) AND ((? = 1 AND `inventory_ID` IS NULL) OR (`inventory_ID` = ?)) AND ((? = 1 AND `qty` IS NULL) OR (`qty` = ?)) AND ((? = 1 AND `reason` IS NULL) OR (`reason` = ?)) AND ((? = 1 AND `mgr_id` IS NULL) OR (`mgr_id` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("trans_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "trans_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("trans_date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "trans_date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("material_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "material_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("component_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "component_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("product_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "product_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("inventory_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "inventory_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("qty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "qty", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("reason", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "reason", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("mgr_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mgr_id", global::System.Data.DataRowVersion.Current, false, null));
@@ -21957,6 +22119,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_component_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "component_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_product_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "product_ID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_product_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "product_ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_inventory_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "inventory_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_inventory_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "inventory_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_qty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "qty", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_qty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "qty", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_reason", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "reason", global::System.Data.DataRowVersion.Original, true, null));
@@ -21980,8 +22144,8 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT trans_ID, trans_date, material_ID, component_ID, product_ID, qty, reason, " +
-                "mgr_id, status FROM Transfer_form";
+            this._commandCollection[0].CommandText = "SELECT trans_ID, trans_date, material_ID, component_ID, product_ID, inventory_ID," +
+                " qty, reason, mgr_id, status FROM Transfer_form";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -22042,7 +22206,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_trans_ID, global::System.Nullable<global::System.DateTime> Original_trans_date, string Original_material_ID, string Original_component_ID, string Original_product_ID, global::System.Nullable<int> Original_qty, string Original_reason, string Original_mgr_id, global::System.Nullable<int> Original_status) {
+        public virtual int Delete(string Original_trans_ID, global::System.Nullable<global::System.DateTime> Original_trans_date, string Original_material_ID, string Original_component_ID, string Original_product_ID, string Original_inventory_ID, global::System.Nullable<int> Original_qty, string Original_reason, string Original_mgr_id, global::System.Nullable<int> Original_status) {
             if ((Original_trans_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_trans_ID");
             }
@@ -22081,37 +22245,45 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_product_ID));
             }
-            if ((Original_qty.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_qty.Value));
-            }
-            else {
+            if ((Original_inventory_ID == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_reason == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_inventory_ID));
+            }
+            if ((Original_qty.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_qty.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_reason));
-            }
-            if ((Original_mgr_id == null)) {
+            if ((Original_reason == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_mgr_id));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_reason));
             }
-            if ((Original_status.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_status.Value));
-            }
-            else {
+            if ((Original_mgr_id == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_mgr_id));
+            }
+            if ((Original_status.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_status.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -22133,7 +22305,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string trans_ID, global::System.Nullable<global::System.DateTime> trans_date, string material_ID, string component_ID, string product_ID, global::System.Nullable<int> qty, string reason, string mgr_id, global::System.Nullable<int> status) {
+        public virtual int Insert(string trans_ID, global::System.Nullable<global::System.DateTime> trans_date, string material_ID, string component_ID, string product_ID, string inventory_ID, global::System.Nullable<int> qty, string reason, string mgr_id, global::System.Nullable<int> status) {
             if ((trans_ID == null)) {
                 throw new global::System.ArgumentNullException("trans_ID");
             }
@@ -22164,29 +22336,35 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(product_ID));
             }
-            if ((qty.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(qty.Value));
-            }
-            else {
+            if ((inventory_ID == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((reason == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(inventory_ID));
+            }
+            if ((qty.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(qty.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(reason));
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((mgr_id == null)) {
+            if ((reason == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(mgr_id));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(reason));
             }
-            if ((status.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(status.Value));
+            if ((mgr_id == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(mgr_id));
+            }
+            if ((status.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(status.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -22214,6 +22392,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string material_ID, 
                     string component_ID, 
                     string product_ID, 
+                    string inventory_ID, 
                     global::System.Nullable<int> qty, 
                     string reason, 
                     string mgr_id, 
@@ -22223,6 +22402,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string Original_material_ID, 
                     string Original_component_ID, 
                     string Original_product_ID, 
+                    string Original_inventory_ID, 
                     global::System.Nullable<int> Original_qty, 
                     string Original_reason, 
                     string Original_mgr_id, 
@@ -22257,99 +22437,113 @@ namespace Sunshine.sunshineDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(product_ID));
             }
-            if ((qty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(qty.Value));
-            }
-            else {
+            if ((inventory_ID == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((reason == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(inventory_ID));
+            }
+            if ((qty.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(qty.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(reason));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((mgr_id == null)) {
+            if ((reason == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(mgr_id));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(reason));
             }
-            if ((status.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(status.Value));
+            if ((mgr_id == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(mgr_id));
+            }
+            if ((status.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(status.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Original_trans_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_trans_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_trans_ID));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_trans_ID));
             }
             if ((Original_trans_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_trans_date.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_trans_date.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((Original_material_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_material_ID));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_material_ID));
             }
             if ((Original_component_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_component_ID));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_component_ID));
             }
             if ((Original_product_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_product_ID));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_product_ID));
+            }
+            if ((Original_inventory_ID == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_inventory_ID));
             }
             if ((Original_qty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_qty.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_qty.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_reason == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_reason));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_reason));
             }
             if ((Original_mgr_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_mgr_id));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_mgr_id));
             }
             if ((Original_status.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_status.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_status.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -22376,6 +22570,7 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string material_ID, 
                     string component_ID, 
                     string product_ID, 
+                    string inventory_ID, 
                     global::System.Nullable<int> qty, 
                     string reason, 
                     string mgr_id, 
@@ -22385,11 +22580,12 @@ namespace Sunshine.sunshineDataSetTableAdapters {
                     string Original_material_ID, 
                     string Original_component_ID, 
                     string Original_product_ID, 
+                    string Original_inventory_ID, 
                     global::System.Nullable<int> Original_qty, 
                     string Original_reason, 
                     string Original_mgr_id, 
                     global::System.Nullable<int> Original_status) {
-            return this.Update(Original_trans_ID, trans_date, material_ID, component_ID, product_ID, qty, reason, mgr_id, status, Original_trans_ID, Original_trans_date, Original_material_ID, Original_component_ID, Original_product_ID, Original_qty, Original_reason, Original_mgr_id, Original_status);
+            return this.Update(Original_trans_ID, trans_date, material_ID, component_ID, product_ID, inventory_ID, qty, reason, mgr_id, status, Original_trans_ID, Original_trans_date, Original_material_ID, Original_component_ID, Original_product_ID, Original_inventory_ID, Original_qty, Original_reason, Original_mgr_id, Original_status);
         }
     }
     

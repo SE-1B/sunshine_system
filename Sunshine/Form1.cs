@@ -47,6 +47,10 @@ namespace Sunshine
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: 這行程式碼會將資料載入 'sunshineDataSet.Staff' 資料表。您可以視需要進行移動或移除。
+            this.staffTableAdapter.Fill(this.sunshineDataSet.Staff);
+            // TODO: 這行程式碼會將資料載入 'sunshineDataSet.Component' 資料表。您可以視需要進行移動或移除。
+            this.componentTableAdapter.Fill(this.sunshineDataSet.Component);
             // placeholders for username and password textboxes
             SendMessage(usernameTB.Handle, EM_SETCUEBANNER, 0, "Username");
             SendMessage(passwordTB.Handle, EM_SETCUEBANNER, 0, "Password");
@@ -72,22 +76,22 @@ namespace Sunshine
                     {
                         connStr.Open();
                     }
-                    String username = usernameTB.Text.Trim() + "@sunshine.com";
                     DataTable dt = new DataTable();
-                    sqlStr = "SELECT * FROM Staff WHERE staff_email = '" + username + "'";
+                    sqlStr = "SELECT * FROM Staff WHERE username = '" + usernameTB.Text + "'";
+                    
                     OleDbDataAdapter dataAdapter =
                             new OleDbDataAdapter(sqlStr, connStr);
                     dataAdapter.Fill(dt);
                     dataAdapter.Dispose();
                     for (int i = 0; i < dt.Rows.Count && !loginSuccess; i++)
-                        if (username.Equals(dt.Rows[i]["staff_email"])
+                        if (usernameTB.Text.Equals(dt.Rows[i]["username"])
                         && passwordTB.Text.Equals(dt.Rows[i]["staff_pw"]))
                             loginSuccess = true;
 
                     if (loginSuccess)
                     {
                         departmentType = (string)dt.Rows[0]["dept_ID"];
-                        DummyHomePage homePage = new DummyHomePage(loginSuccess, departmentType, (string)dt.Rows[0]["name"]);
+                        HomePage homePage = new HomePage(loginSuccess, departmentType, (string)dt.Rows[0]["name"]);
                         homePage.Show(); // Show the HomePage form
                         if (connStr.State != ConnectionState.Closed)
                         {
@@ -105,7 +109,7 @@ namespace Sunshine
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "\nSQL: " + sqlStr);
+                    MessageBox.Show(ex.StackTrace + "\nSQL: " + sqlStr);
                 }
             }
 
@@ -116,6 +120,5 @@ namespace Sunshine
             ForgetPassword forgetPasswordForm = new ForgetPassword();
             forgetPasswordForm.ShowDialog();
         }
-
     }
 }

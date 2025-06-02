@@ -22,3 +22,7 @@ C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1
 C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
 C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.exe
 C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\sunshine.accdb
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.HomePage.resources
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.ForgetPassword.resources
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.exe.config
