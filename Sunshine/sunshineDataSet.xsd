@@ -1566,6 +1566,52 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Product_qtyTableAdapter" GeneratorDataComponentClassName="Product_qtyTableAdapter" Name="Product_qty" UserDataComponentName="Product_qtyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sunshineConnectionString (Settings)" DbObjectName="Product_qty" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT product_ID, product_name, price, totalQty, MOQ, model, color, detail, product_type FROM Product_qty</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="product_ID" DataSetColumn="product_ID" />
+              <Mapping SourceColumn="product_name" DataSetColumn="product_name" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="totalQty" DataSetColumn="totalQty" />
+              <Mapping SourceColumn="MOQ" DataSetColumn="MOQ" />
+              <Mapping SourceColumn="model" DataSetColumn="model" />
+              <Mapping SourceColumn="color" DataSetColumn="color" />
+              <Mapping SourceColumn="detail" DataSetColumn="detail" />
+              <Mapping SourceColumn="product_type" DataSetColumn="product_type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="目前的事件TableAdapter" GeneratorDataComponentClassName="目前的事件TableAdapter" Name="目前的事件" UserDataComponentName="目前的事件TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sunshineConnectionString (Settings)" DbObjectName="目前的事件" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 識別碼, 標題, 開始時間, 結束日期, 位置, 描述, 附件 FROM 目前的事件</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="識別碼" DataSetColumn="識別碼" />
+              <Mapping SourceColumn="標題" DataSetColumn="標題" />
+              <Mapping SourceColumn="開始時間" DataSetColumn="開始時間" />
+              <Mapping SourceColumn="結束日期" DataSetColumn="結束日期" />
+              <Mapping SourceColumn="位置" DataSetColumn="位置" />
+              <Mapping SourceColumn="描述" DataSetColumn="描述" />
+              <Mapping SourceColumn="附件" DataSetColumn="附件" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2317,6 +2363,94 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Product_qty" msprop:Generator_RowEvHandlerName="Product_qtyRowChangeEventHandler" msprop:Generator_RowDeletedName="Product_qtyRowDeleted" msprop:Generator_RowDeletingName="Product_qtyRowDeleting" msprop:Generator_RowEvArgName="Product_qtyRowChangeEvent" msprop:Generator_TablePropName="Product_qty" msprop:Generator_RowChangedName="Product_qtyRowChanged" msprop:Generator_RowChangingName="Product_qtyRowChanging" msprop:Generator_TableClassName="Product_qtyDataTable" msprop:Generator_RowClassName="Product_qtyRow" msprop:Generator_TableVarName="tableProduct_qty" msprop:Generator_UserTableName="Product_qty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="product_ID" msprop:Generator_ColumnPropNameInRow="product_ID" msprop:Generator_ColumnPropNameInTable="product_IDColumn" msprop:Generator_ColumnVarNameInTable="columnproduct_ID" msprop:Generator_UserColumnName="product_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="product_name" msprop:Generator_ColumnPropNameInRow="product_name" msprop:Generator_ColumnPropNameInTable="product_nameColumn" msprop:Generator_ColumnVarNameInTable="columnproduct_name" msprop:Generator_UserColumnName="product_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_UserColumnName="price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="totalQty" msprop:Generator_ColumnPropNameInRow="totalQty" msprop:Generator_ColumnPropNameInTable="totalQtyColumn" msprop:Generator_ColumnVarNameInTable="columntotalQty" msprop:Generator_UserColumnName="totalQty" type="xs:double" minOccurs="0" />
+              <xs:element name="MOQ" msprop:Generator_ColumnPropNameInRow="MOQ" msprop:Generator_ColumnPropNameInTable="MOQColumn" msprop:Generator_ColumnVarNameInTable="columnMOQ" msprop:Generator_UserColumnName="MOQ" type="xs:int" minOccurs="0" />
+              <xs:element name="model" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_UserColumnName="model" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="color" msprop:Generator_ColumnPropNameInRow="color" msprop:Generator_ColumnPropNameInTable="colorColumn" msprop:Generator_ColumnVarNameInTable="columncolor" msprop:Generator_UserColumnName="color" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="detail" msprop:Generator_ColumnPropNameInRow="detail" msprop:Generator_ColumnPropNameInTable="detailColumn" msprop:Generator_ColumnVarNameInTable="columndetail" msprop:Generator_UserColumnName="detail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="product_type" msprop:Generator_ColumnPropNameInRow="product_type" msprop:Generator_ColumnPropNameInTable="product_typeColumn" msprop:Generator_ColumnVarNameInTable="columnproduct_type" msprop:Generator_UserColumnName="product_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="目前的事件" msprop:Generator_RowEvHandlerName="目前的事件RowChangeEventHandler" msprop:Generator_RowDeletedName="目前的事件RowDeleted" msprop:Generator_RowDeletingName="目前的事件RowDeleting" msprop:Generator_RowEvArgName="目前的事件RowChangeEvent" msprop:Generator_TablePropName="目前的事件" msprop:Generator_RowChangedName="目前的事件RowChanged" msprop:Generator_RowChangingName="目前的事件RowChanging" msprop:Generator_TableClassName="目前的事件DataTable" msprop:Generator_RowClassName="目前的事件Row" msprop:Generator_TableVarName="table目前的事件" msprop:Generator_UserTableName="目前的事件">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="識別碼" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="識別碼" msprop:Generator_ColumnPropNameInTable="識別碼Column" msprop:Generator_ColumnVarNameInTable="column識別碼" msprop:Generator_UserColumnName="識別碼" type="xs:int" />
+              <xs:element name="標題" msprop:Generator_ColumnPropNameInRow="標題" msprop:Generator_ColumnPropNameInTable="標題Column" msprop:Generator_ColumnVarNameInTable="column標題" msprop:Generator_UserColumnName="標題" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="開始時間" msprop:Generator_ColumnPropNameInRow="開始時間" msprop:Generator_ColumnPropNameInTable="開始時間Column" msprop:Generator_ColumnVarNameInTable="column開始時間" msprop:Generator_UserColumnName="開始時間" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="結束日期" msprop:Generator_ColumnPropNameInRow="結束日期" msprop:Generator_ColumnPropNameInTable="結束日期Column" msprop:Generator_ColumnVarNameInTable="column結束日期" msprop:Generator_UserColumnName="結束日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="位置" msprop:Generator_ColumnPropNameInRow="位置" msprop:Generator_ColumnPropNameInTable="位置Column" msprop:Generator_ColumnVarNameInTable="column位置" msprop:Generator_UserColumnName="位置" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="描述" msprop:Generator_ColumnPropNameInRow="描述" msprop:Generator_ColumnPropNameInTable="描述Column" msprop:Generator_ColumnVarNameInTable="column描述" msprop:Generator_UserColumnName="描述" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="附件" msprop:Generator_ColumnPropNameInRow="附件" msprop:Generator_ColumnPropNameInTable="附件Column" msprop:Generator_ColumnVarNameInTable="column附件" msprop:Generator_UserColumnName="附件" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -2405,6 +2539,14 @@
     </xs:unique>
     <xs:unique name="事件_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:事件" />
+      <xs:field xpath="mstns:識別碼" />
+    </xs:unique>
+    <xs:unique name="Product_qty_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Product_qty" />
+      <xs:field xpath="mstns:product_ID" />
+    </xs:unique>
+    <xs:unique name="目前的事件_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:目前的事件" />
       <xs:field xpath="mstns:識別碼" />
     </xs:unique>
   </xs:element>

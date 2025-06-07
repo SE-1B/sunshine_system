@@ -37,7 +37,7 @@ namespace Sunshine
 
         public static string GenerateRandomPassword(int length)
         {
-            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!";
             StringBuilder res = new StringBuilder();
             Random rnd = new Random();
             for (int i = 0; i < length; i++)
@@ -72,17 +72,26 @@ namespace Sunshine
                 if (foodTB.Text.Equals((String)dt.Rows[0]["favourite_food"]))
                 {
                     // Simulate sending an email (to be done later)
-                    MessageBox.Show("A password reset link has been sent to your email address.");
+                    MessageBox.Show("A password reset has been sent to your email address.");
                     // Generate a new password
                     string newPassword = GenerateRandomPassword(12);
-                    // Update the user's password in the database (to be done later)
+                    // Update the user's password in the database
+                    string updateSql = "UPDATE Staff SET staff_pw = ? WHERE staff_ID = ?";
+                    using (OleDbCommand cmd = new OleDbCommand(updateSql, connStr))
+                    {
+                        cmd.Parameters.AddWithValue("?", newPassword);
+                        cmd.Parameters.AddWithValue("?", dt.Rows[0]["staff_ID"]);
+                        cmd.ExecuteNonQuery();
+                    }
 
                     // Show the new password to the user
                     newPasswordLabel.Text = "New password: " + newPassword;
                 }
                 else
                 {
-                    MessageBox.Show("You answer the security question incorrectly. Please try again.");
+                    // Hint the first letter of the answer
+                    string hint = dt.Rows[0]["favourite_food"].ToString().Substring(0, 1) + "****";
+                    MessageBox.Show("You answer the security question incorrectly. Please try again.\n" + "Hint: " + hint);
                 }
 
             }
