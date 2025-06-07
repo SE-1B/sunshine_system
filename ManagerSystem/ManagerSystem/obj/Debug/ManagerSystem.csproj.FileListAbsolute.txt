@@ -1,0 +1,10 @@
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\bin\Debug\ManagerSystem.exe.config
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\bin\Debug\ManagerSystem.exe
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\bin\Debug\ManagerSystem.pdb
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.csproj.AssemblyReference.cache
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.Form1.resources
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.Properties.Resources.resources
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.csproj.GenerateResource.cache
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.csproj.CoreCompileInputs.cache
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.exe
+C:\Users\tckai\source\repos\ManagerSystem\ManagerSystem\obj\Debug\ManagerSystem.pdb
