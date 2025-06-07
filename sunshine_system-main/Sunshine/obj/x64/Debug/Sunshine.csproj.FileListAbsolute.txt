@@ -1,0 +1,54 @@
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\Sunshine.exe.config
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\Sunshine.exe
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\Sunshine.pdb
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.AssemblyReference.cache
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.Properties.Resources.resources
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.GenerateResource.cache
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.exe
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.LoginPage.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\sunshine.accdb
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\Sunshine.exe
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\Sunshine.pdb
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.AssemblyReference.cache
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.DummyHomePage.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.ForgetPassword.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.LoginPage.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.Properties.Resources.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.GenerateResource.cache
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.exe
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\bin\x64\Debug\sunshine.accdb
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.HomePage.resources
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.ForgetPassword.resources
+C:\Users\240708635\OneDrive - Vocational Training Council - Student\ITP4915M_IT_ICT_1( System Development Project )\Sunshine\Sunshine\obj\x64\Debug\Sunshine.exe.config
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\sunshine.accdb
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.exe.config
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.exe
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.pdb
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.HomePage.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.ForgetPassword.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.LoginPage.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Properties.Resources.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.GenerateResource.cache
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.salesMain.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe.config
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.salesDashboard.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\System.CodeDom.dll
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\bin\x64\Debug\System.CodeDom.xml
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.salesOrder.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.Up2Date
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.addOrder.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.salesCustomer.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.salesReport.resources
+C:\Users\User\Desktop\4915\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.addCustomer.resources

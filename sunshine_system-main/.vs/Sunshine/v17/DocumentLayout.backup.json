@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\user\\desktop\\4915\\sunshine_system-main\\sunshine\\sales_dept\\addorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\sales_dept\\addorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\sunshine\\sales_dept\\salesmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\sales_dept\\salesmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\sunshine\\sales_dept\\salescustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\sales_dept\\salescustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\sunshine\\sales_dept\\salescustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\sales_dept\\salescustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\sunshine\\sales_dept\\addorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\sales_dept\\addorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\sunshine\\sunshinedataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\sunshinedataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "addOrder.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\addOrder.cs",
+              "RelativeDocumentMoniker": "Sunshine\\Sales_dept\\addOrder.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\addOrder.cs",
+              "RelativeToolTip": "Sunshine\\Sales_dept\\addOrder.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAewBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:30:10.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "salesCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\salesCustomer.cs",
+              "RelativeDocumentMoniker": "Sunshine\\Sales_dept\\salesCustomer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\salesCustomer.cs",
+              "RelativeToolTip": "Sunshine\\Sales_dept\\salesCustomer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAlwBYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:15:17.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "salesCustomer.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\salesCustomer.cs",
+              "RelativeDocumentMoniker": "Sunshine\\Sales_dept\\salesCustomer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\salesCustomer.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Sunshine\\Sales_dept\\salesCustomer.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:14:55.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "salesMain.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\salesMain.cs",
+              "RelativeDocumentMoniker": "Sunshine\\Sales_dept\\salesMain.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\salesMain.cs",
+              "RelativeToolTip": "Sunshine\\Sales_dept\\salesMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:06:11.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "addOrder.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\addOrder.cs",
+              "RelativeDocumentMoniker": "Sunshine\\Sales_dept\\addOrder.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\Sales_dept\\addOrder.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Sunshine\\Sales_dept\\addOrder.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:11:04.932Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "sunshineDataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\sunshineDataSet.xsd",
+              "RelativeDocumentMoniker": "Sunshine\\sunshineDataSet.xsd",
+              "ToolTip": "C:\\Users\\User\\Desktop\\4915\\sunshine_system-main\\Sunshine\\sunshineDataSet.xsd",
+              "RelativeToolTip": "Sunshine\\sunshineDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-06-07T03:36:54.17Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
