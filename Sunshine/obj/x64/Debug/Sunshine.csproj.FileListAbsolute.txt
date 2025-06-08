@@ -92,3 +92,4 @@ C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.cspr
 C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
 C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.exe
 C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.ProductionSupplyHome.resources

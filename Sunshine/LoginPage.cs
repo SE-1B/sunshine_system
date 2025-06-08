@@ -128,6 +128,8 @@ namespace Sunshine
                         else if (departmentType == "05")
                         // Redirect to the HomePage for Product and Supply Chain Team
                         {
+                            ProductionSupplyHome productionSupplyHome = new ProductionSupplyHome(staff_ID, staff_name);
+                            productionSupplyHome.Show();
                         }
                         else if (departmentType == "06")
                         // Redirect to the HomePage for Finance Team
