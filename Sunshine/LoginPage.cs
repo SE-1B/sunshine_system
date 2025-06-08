@@ -1,4 +1,4 @@
-﻿using Sunshine.sunshineDataSetTableAdapters;
+﻿using ManagerSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,6 +107,8 @@ namespace Sunshine
                         if (departmentType == "01")
                         // Redirect to the HomePage for Manager
                         {
+                            ManagerSystemHomePage managerSystemHomePage = new ManagerSystemHomePage(staff_ID, staff_name);
+                            managerSystemHomePage.Show();
                         }
                         else if (departmentType == "02")
                         {

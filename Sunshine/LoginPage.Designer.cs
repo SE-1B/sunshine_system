@@ -168,10 +168,6 @@
         private System.Windows.Forms.LinkLabel forgetPasswordLL;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label2;
-        private sunshineDataSet sunshineDataSet;
-        private sunshineDataSetTableAdapters.ComponentTableAdapter componentTableAdapter;
-        private sunshineDataSetTableAdapters.StaffTableAdapter staffTableAdapter;
-        private sunshineDataSet sunshineDataSet1;
     }
 }
 

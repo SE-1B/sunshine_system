@@ -3,50 +3,49 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
-namespace Sunshine
+
+namespace ManagerSystem
 {
-    public partial class InventoryHomePage : Form
+    public partial class ManagerSystemHomePage : Form
     {
         private string _Id; // User ID
         private string _name; // User Name
-        public InventoryHomePage(string Id, string name)
+        public ManagerSystemHomePage(string Id, string name)
         {
             InitializeComponent();
+            this.Resize += (s, e) => this.Invalidate();
             _Id = Id;
             _name = name;
         }
-        // change the background color of the form to a gradient
+
         protected override void OnPaintBackground(PaintEventArgs e)
         {
-            // Create a linear gradient from top-left to bottom-right
             using (LinearGradientBrush brush = new LinearGradientBrush(
                 this.ClientRectangle,
-                Color.LightSkyBlue, // Start color
-                Color.LightYellow,  // End color
+                Color.LightSkyBlue,
+                Color.LightYellow,
                 LinearGradientMode.ForwardDiagonal))
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
 
-        private void InventoryHomePage_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            labelWelcome.Text = $"Welcome, {_name}";
-
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            InventoryViewProduct viewProduct = new InventoryViewProduct();
-            viewProduct.ShowDialog();
-            this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
