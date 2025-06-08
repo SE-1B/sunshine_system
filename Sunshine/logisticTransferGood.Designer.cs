@@ -39,10 +39,10 @@
             this.sunshineDataSet = new Sunshine.sunshineDataSet();
             this.sunshineDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbWait = new System.Windows.Forms.CheckBox();
-            this.cbComplete = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cbHaveProblem = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbComplete = new System.Windows.Forms.CheckBox();
+            this.cbWait = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CompanyIcon)).BeginInit();
@@ -151,27 +151,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Please select status:";
             // 
-            // cbWait
+            // cbHaveProblem
             // 
-            this.cbWait.AutoSize = true;
-            this.cbWait.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbWait.Location = new System.Drawing.Point(6, 52);
-            this.cbWait.Name = "cbWait";
-            this.cbWait.Size = new System.Drawing.Size(61, 16);
-            this.cbWait.TabIndex = 0;
-            this.cbWait.Text = "1:Wait";
-            this.cbWait.UseVisualStyleBackColor = true;
-            // 
-            // cbComplete
-            // 
-            this.cbComplete.AutoSize = true;
-            this.cbComplete.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbComplete.Location = new System.Drawing.Point(206, 52);
-            this.cbComplete.Name = "cbComplete";
-            this.cbComplete.Size = new System.Drawing.Size(88, 16);
-            this.cbComplete.TabIndex = 1;
-            this.cbComplete.Text = "3:Complete";
-            this.cbComplete.UseVisualStyleBackColor = true;
+            this.cbHaveProblem.AutoSize = true;
+            this.cbHaveProblem.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbHaveProblem.Location = new System.Drawing.Point(330, 52);
+            this.cbHaveProblem.Name = "cbHaveProblem";
+            this.cbHaveProblem.Size = new System.Drawing.Size(113, 16);
+            this.cbHaveProblem.TabIndex = 3;
+            this.cbHaveProblem.Text = "4:Have Problem";
+            this.cbHaveProblem.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -184,16 +173,27 @@
             this.checkBox1.Text = "2:Process";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // cbHaveProblem
+            // cbComplete
             // 
-            this.cbHaveProblem.AutoSize = true;
-            this.cbHaveProblem.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbHaveProblem.Location = new System.Drawing.Point(330, 52);
-            this.cbHaveProblem.Name = "cbHaveProblem";
-            this.cbHaveProblem.Size = new System.Drawing.Size(113, 16);
-            this.cbHaveProblem.TabIndex = 3;
-            this.cbHaveProblem.Text = "4:Have Problem";
-            this.cbHaveProblem.UseVisualStyleBackColor = true;
+            this.cbComplete.AutoSize = true;
+            this.cbComplete.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbComplete.Location = new System.Drawing.Point(206, 52);
+            this.cbComplete.Name = "cbComplete";
+            this.cbComplete.Size = new System.Drawing.Size(88, 16);
+            this.cbComplete.TabIndex = 1;
+            this.cbComplete.Text = "3:Complete";
+            this.cbComplete.UseVisualStyleBackColor = true;
+            // 
+            // cbWait
+            // 
+            this.cbWait.AutoSize = true;
+            this.cbWait.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbWait.Location = new System.Drawing.Point(6, 52);
+            this.cbWait.Name = "cbWait";
+            this.cbWait.Size = new System.Drawing.Size(61, 16);
+            this.cbWait.TabIndex = 0;
+            this.cbWait.Text = "1:Wait";
+            this.cbWait.UseVisualStyleBackColor = true;
             // 
             // logisticTransferGood
             // 
@@ -207,6 +207,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "logisticTransferGood";
             this.Text = "Transfer Good";
+            this.Load += new System.EventHandler(this.logisticTransferGood_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CompanyIcon)).EndInit();

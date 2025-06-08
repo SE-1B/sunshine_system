@@ -15,6 +15,7 @@ namespace Sunshine
         public logisticUpdateCustomerOrder()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void logisticUpdateCustomerOrder_Load(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace Sunshine
         public LogisticHome(string Id, string name)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             _Id = Id;
             _name = name;
         }
@@ -39,16 +40,17 @@ namespace Sunshine
 
         private void btnUpdateCustomerOrder_Click(object sender, EventArgs e)
         {
-            logisticUpdateCustomerOrder logisticUpdateCustomerOrder = new logisticUpdateCustomerOrder();
-            logisticUpdateCustomerOrder.ShowDialog();
-            this.Hide();
+            ShowUpdateCustomerOrder();
         }
 
         private void btnGoodTransfer_Click(object sender, EventArgs e)
         {
-            logisticTransferGood logisticTransferGood = new logisticTransferGood();
-            logisticTransferGood.ShowDialog();
-            this.Hide();
+            this.Hide(); // Hide LogisticHome first
+            using (var logisticTransferGoodForm = new logisticTransferGood())
+            {
+                logisticTransferGoodForm.ShowDialog(); // Show as modal dialog
+            }
+            this.Hide(); // Hide LogisticHome after the dialog closes
         }
 
         private void btnGenerateDeliveryNote_Click(object sender, EventArgs e)
@@ -58,7 +60,20 @@ namespace Sunshine
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("You have successfully logged out!");
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Close();
+        }
 
+        private void ShowUpdateCustomerOrder()
+        {
+            using (var updateOrderForm = new logisticUpdateCustomerOrder())
+            {
+                this.Hide(); // Hide LogisticHome
+                updateOrderForm.ShowDialog(); // Show as modal
+                this.Hide(); // Hide LogisticHome after popup closes
+            }
         }
     }
 }

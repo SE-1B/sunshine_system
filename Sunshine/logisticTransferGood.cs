@@ -15,6 +15,12 @@ namespace Sunshine
         public logisticTransferGood()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void logisticTransferGood_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
