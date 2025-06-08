@@ -118,6 +118,8 @@ namespace Sunshine
                         else if (departmentType == "03")
                         // Redirect to the HomePage for Logistic Team  
                         {
+                            LogisticHome logisticHome = new LogisticHome(staff_ID, staff_name);
+                            logisticHome.Show();
                         }
                         else if (departmentType == "04")
                         // Redirect to the HomePage for Sales and Marketing Team

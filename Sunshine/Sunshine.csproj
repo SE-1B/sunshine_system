@@ -91,6 +91,24 @@
     <Compile Include="InventoryHomePage.Designer.cs">
       <DependentUpon>InventoryHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogisticHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogisticHome.Designer.cs">
+      <DependentUpon>LogisticHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logisticTransferGood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logisticTransferGood.Designer.cs">
+      <DependentUpon>logisticTransferGood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logisticUpdateCustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logisticUpdateCustomerOrder.Designer.cs">
+      <DependentUpon>logisticUpdateCustomerOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerSystemHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +137,19 @@
     <EmbeddedResource Include="InventoryHomePage.resx">
       <DependentUpon>InventoryHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogisticHome.resx">
+      <DependentUpon>LogisticHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logisticTransferGood.resx">
+      <DependentUpon>logisticTransferGood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logisticUpdateCustomerOrder.resx">
+      <DependentUpon>logisticUpdateCustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerSystemHomePage.resx">
       <DependentUpon>ManagerSystemHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\logisticUpdateCustomerOrder.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -168,6 +196,7 @@
   <ItemGroup>
     <None Include="Resources\companyIcon.png" />
     <None Include="Resources\userIcon.jpg" />
+    <Content Include=".gitignore" />
     <Content Include="sunshine.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
