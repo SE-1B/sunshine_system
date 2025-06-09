@@ -56,6 +56,10 @@ namespace Sunshine
 
         private void InventoryProductDetail_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sunshineDataSet1.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter1.Fill(this.sunshineDataSet1.Product);
+            // TODO: This line of code loads data into the 'sunshineDataSet1.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter1.Fill(this.sunshineDataSet1.Product);
             // TODO: 這行程式碼會將資料載入 'sunshineDataSet.Product' 資料表。您可以視需要進行移動或移除。
             this.productTableAdapter.Fill(this.sunshineDataSet.Product);
             if (_index < 0 || _index >= productBindingSource.Count)
@@ -130,6 +134,14 @@ namespace Sunshine
         {
             productBindingSource.Position = cbName.SelectedIndex;
             updateData();
+        }
+
+        private void productBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.productBindingSource.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.sunshineDataSet1);
+
         }
     }
 }

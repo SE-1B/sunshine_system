@@ -46,18 +46,19 @@
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Location = new System.Drawing.Point(276, 69);
+            this.labelWelcome.Location = new System.Drawing.Point(207, 60);
+            this.labelWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(90, 15);
+            this.labelWelcome.Size = new System.Drawing.Size(79, 13);
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "Welcome back";
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(280, 138);
-            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnView.Location = new System.Drawing.Point(210, 120);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(465, 46);
+            this.btnView.Size = new System.Drawing.Size(349, 40);
             this.btnView.TabIndex = 1;
             this.btnView.Text = "View product";
             this.btnView.UseVisualStyleBackColor = true;
@@ -66,10 +67,10 @@
             // btnRestock
             // 
             this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRestock.Location = new System.Drawing.Point(280, 214);
-            this.btnRestock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRestock.Location = new System.Drawing.Point(210, 185);
+            this.btnRestock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRestock.Name = "btnRestock";
-            this.btnRestock.Size = new System.Drawing.Size(465, 46);
+            this.btnRestock.Size = new System.Drawing.Size(349, 40);
             this.btnRestock.TabIndex = 3;
             this.btnRestock.Text = "Restock poduct";
             this.btnRestock.UseVisualStyleBackColor = false;
@@ -77,10 +78,10 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDelete.Location = new System.Drawing.Point(280, 357);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(210, 309);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(465, 46);
+            this.btnDelete.Size = new System.Drawing.Size(349, 40);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete product";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -90,10 +91,10 @@
             this.btnLogout.BackColor = System.Drawing.Color.IndianRed;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.btnLogout.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnLogout.Location = new System.Drawing.Point(74, 413);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(56, 358);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(100, 46);
+            this.btnLogout.Size = new System.Drawing.Size(75, 40);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -101,10 +102,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(280, 281);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(210, 244);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(465, 46);
+            this.btnEdit.Size = new System.Drawing.Size(349, 40);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit porduct";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -116,9 +117,8 @@
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 494);
+            this.panel1.Size = new System.Drawing.Size(183, 428);
             this.panel1.TabIndex = 12;
             // 
             // btnSideBar_EmpHome
@@ -127,10 +127,9 @@
             this.btnSideBar_EmpHome.FlatAppearance.BorderSize = 0;
             this.btnSideBar_EmpHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSideBar_EmpHome.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.btnSideBar_EmpHome.Location = new System.Drawing.Point(4, 165);
-            this.btnSideBar_EmpHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSideBar_EmpHome.Location = new System.Drawing.Point(3, 143);
             this.btnSideBar_EmpHome.Name = "btnSideBar_EmpHome";
-            this.btnSideBar_EmpHome.Size = new System.Drawing.Size(236, 99);
+            this.btnSideBar_EmpHome.Size = new System.Drawing.Size(177, 86);
             this.btnSideBar_EmpHome.TabIndex = 10;
             this.btnSideBar_EmpHome.Text = "Home";
             this.btnSideBar_EmpHome.UseVisualStyleBackColor = false;
@@ -139,9 +138,8 @@
             // 
             this.panel2.Controls.Add(this.pictureBox_CompanyIcon);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(244, 140);
+            this.panel2.Size = new System.Drawing.Size(183, 121);
             this.panel2.TabIndex = 8;
             // 
             // pictureBox_CompanyIcon
@@ -149,26 +147,26 @@
             this.pictureBox_CompanyIcon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_CompanyIcon.Image = global::Sunshine.Properties.Resources.companyIcon;
             this.pictureBox_CompanyIcon.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_CompanyIcon.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_CompanyIcon.Name = "pictureBox_CompanyIcon";
-            this.pictureBox_CompanyIcon.Size = new System.Drawing.Size(244, 140);
+            this.pictureBox_CompanyIcon.Size = new System.Drawing.Size(183, 121);
             this.pictureBox_CompanyIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_CompanyIcon.TabIndex = 0;
             this.pictureBox_CompanyIcon.TabStop = false;
             // 
             // InventoryHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 494);
+            this.ClientSize = new System.Drawing.Size(638, 428);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnRestock);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.labelWelcome);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InventoryHomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InventoryHomePage";
             this.Load += new System.EventHandler(this.InventoryHomePage_Load);
             this.panel1.ResumeLayout(false);
