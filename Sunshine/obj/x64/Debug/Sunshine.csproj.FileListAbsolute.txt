@@ -72,3 +72,45 @@ C:\Users\Tong\Downloads\sunshine_system-main\sunshine_system-main\Sunshine\obj\x
 C:\Users\Tong\Downloads\sunshine_system-main\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe
 C:\Users\Tong\Downloads\sunshine_system-main\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.pdb
 C:\Users\Tong\Downloads\sunshine_system-main\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\sunshine.accdb
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.exe
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.pdb
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.AssemblyReference.cache
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.ForgetPassword.resources
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryViewProduct.resources
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.LoginPage.resources
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryHomePage.resources
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\ManagerSystem.ManagerSystemHomePage.resources
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Properties.Resources.resources
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.GenerateResource.cache
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe
+C:\Users\Tong\Downloads\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.AssemblyReference.cache
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.ForgetPassword.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryProductDetail.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryViewProduct.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.LoginPage.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryHomePage.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\ManagerSystem.ManagerSystemHomePage.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Properties.Resources.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.GenerateResource.cache
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.csproj.CoreCompileInputs.cache
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.exe
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.pdb
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\sunshine.accdb
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.exe.config
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.exe
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\bin\x64\Debug\Sunshine.pdb
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryAddProduct.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.InventoryRestock.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.AddCustomer.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.AddOrder.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.SalesCustomer.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.SalesDashboard.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.SalesMain.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.SalesOrder.resources
+C:\Users\Tong\OneDrive - Vocational Training Council - Student\Sem  (3)\ITP4915M_IT_ICT_1( System Development Project )\sunshine_system-main (2)\sunshine_system-main\Sunshine\obj\x64\Debug\Sunshine.Sales_dept.SalesReport.resources
