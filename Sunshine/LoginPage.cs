@@ -120,8 +120,10 @@ namespace Sunshine
                         {
                         }
                         else if (departmentType == "04")
-                        // Redirect to the HomePage for Sales and Marketing Team
+                            // Redirect to the HomePage for Sales and Marketing Team
                         {
+                            SalesMain salesMain = new SalesMain();
+                            salesMain.Show();
                         }
                         else if (departmentType == "05")
                         // Redirect to the HomePage for Product and Supply Chain Team
