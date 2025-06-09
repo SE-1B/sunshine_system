@@ -93,3 +93,7 @@ C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.cspr
 C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.exe
 C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.pdb
 C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.ProductionSupplyHome.resources
+C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.logisticGenerateDeliveryNote.resources
+C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.psDisplayOrder.resources
+C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.psAddOrder.resources
+C:\Users\admin\Source\Repos\sunshine_system\Sunshine\obj\x64\Debug\Sunshine.psModifyOrder.resources

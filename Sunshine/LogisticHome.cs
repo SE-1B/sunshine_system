@@ -55,7 +55,13 @@ namespace Sunshine
 
         private void btnGenerateDeliveryNote_Click(object sender, EventArgs e)
         {
-
+            this.Hide(); // Hide LogisticHome
+            using (var generateDeliveryNoteForm = new logisticGenerateDeliveryNote())
+            {
+                generateDeliveryNoteForm.StartPosition = FormStartPosition.CenterScreen;
+                generateDeliveryNoteForm.ShowDialog(); // Show as modal dialog
+            }
+            this.Hide(); // Hide LogisticHome after the dialog closes
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

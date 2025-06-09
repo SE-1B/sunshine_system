@@ -22,5 +22,10 @@ namespace Sunshine
         {
 
         }
+
+        private void sunshineDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
