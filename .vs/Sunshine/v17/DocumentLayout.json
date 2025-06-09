@@ -3,20 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\sunshine_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\productionsupplyhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\productionsupplyhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\psdisplayorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\psdisplayorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\productionsupplyhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\productionsupplyhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\admin\\source\\repos\\sunshine_system\\sunshine\\logistichome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logistichome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\logisticupdatecustomerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logisticupdatecustomerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\logistictransfergood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logistictransfergood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\logistichome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logistichome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\logisticgeneratedeliverynote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logisticgeneratedeliverynote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\inventoryhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\inventoryhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\managersystemhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\managersystemhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\logisticupdatecustomerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logisticupdatecustomerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\logisticgeneratedeliverynote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logisticgeneratedeliverynote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|C:\\Users\\admin\\source\\repos\\sunshine_system\\sunshine\\logistichome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\logistichome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|c:\\users\\admin\\source\\repos\\sunshine_system\\sunshine\\productionsupplyhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80253590-A3C2-4865-962E-69B50192AF0A}|Sunshine\\Sunshine.csproj|solutionrelative:sunshine\\productionsupplyhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,16 +90,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginPage.cs",
+              "DocumentIndex": 0,
+              "Title": "psDisplayOrder.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\psDisplayOrder.cs",
+              "RelativeDocumentMoniker": "Sunshine\\psDisplayOrder.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\psDisplayOrder.cs [Design]",
+              "RelativeToolTip": "Sunshine\\psDisplayOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:57:03.195Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InventoryHomePage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\InventoryHomePage.cs",
+              "RelativeDocumentMoniker": "Sunshine\\InventoryHomePage.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\InventoryHomePage.cs [Design]",
+              "RelativeToolTip": "Sunshine\\InventoryHomePage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:55:47.125Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ManagerSystemHomePage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\ManagerSystemHomePage.cs",
+              "RelativeDocumentMoniker": "Sunshine\\ManagerSystemHomePage.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\ManagerSystemHomePage.cs [Design]",
+              "RelativeToolTip": "Sunshine\\ManagerSystemHomePage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:55:41.725Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "logisticGenerateDeliveryNote.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticGenerateDeliveryNote.cs",
+              "RelativeDocumentMoniker": "Sunshine\\logisticGenerateDeliveryNote.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticGenerateDeliveryNote.cs [Design]",
+              "RelativeToolTip": "Sunshine\\logisticGenerateDeliveryNote.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:51:13.921Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LoginPage.cs",
               "RelativeDocumentMoniker": "Sunshine\\LoginPage.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LoginPage.cs",
-              "RelativeToolTip": "Sunshine\\LoginPage.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAQwIMAAAA4AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LoginPage.cs [Design]",
+              "RelativeToolTip": "Sunshine\\LoginPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T17:37:04.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T17:50:27.938Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "logisticUpdateCustomerOrder.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticUpdateCustomerOrder.cs",
+              "RelativeDocumentMoniker": "Sunshine\\logisticUpdateCustomerOrder.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticUpdateCustomerOrder.cs [Design]",
+              "RelativeToolTip": "Sunshine\\logisticUpdateCustomerOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:41:30.349Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "logisticTransferGood.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticTransferGood.cs",
+              "RelativeDocumentMoniker": "Sunshine\\logisticTransferGood.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticTransferGood.cs [Design]",
+              "RelativeToolTip": "Sunshine\\logisticTransferGood.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:41:25.926Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogisticHome.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LogisticHome.cs",
+              "RelativeDocumentMoniker": "Sunshine\\LogisticHome.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LogisticHome.cs [Design]",
+              "RelativeToolTip": "Sunshine\\LogisticHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:41:18.74Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -75,20 +198,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
+              "Title": "logisticUpdateCustomerOrder.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Source\\Repos\\sunshine_system\\Sunshine\\logisticUpdateCustomerOrder.Designer.cs",
+              "RelativeDocumentMoniker": "Sunshine\\logisticUpdateCustomerOrder.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Source\\Repos\\sunshine_system\\Sunshine\\logisticUpdateCustomerOrder.Designer.cs",
+              "RelativeToolTip": "Sunshine\\logisticUpdateCustomerOrder.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:55:35.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "logisticGenerateDeliveryNote.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticGenerateDeliveryNote.cs",
+              "RelativeDocumentMoniker": "Sunshine\\logisticGenerateDeliveryNote.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\logisticGenerateDeliveryNote.cs",
+              "RelativeToolTip": "Sunshine\\logisticGenerateDeliveryNote.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:51:49.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LoginPage.cs",
+              "RelativeDocumentMoniker": "Sunshine\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LoginPage.cs",
+              "RelativeToolTip": "Sunshine\\LoginPage.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAQwIMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:37:04.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "ProductionSupplyHome.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\ProductionSupplyHome.cs",
               "RelativeDocumentMoniker": "Sunshine\\ProductionSupplyHome.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\ProductionSupplyHome.cs",
               "RelativeToolTip": "Sunshine\\ProductionSupplyHome.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAnwCQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAnwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T17:09:50.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "LogisticHome.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\sunshine_system\\Sunshine\\LogisticHome.cs",
               "RelativeDocumentMoniker": "Sunshine\\LogisticHome.cs",
